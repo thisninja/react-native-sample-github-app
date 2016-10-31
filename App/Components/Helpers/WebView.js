@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
 import {
-	View,
- 	WebView,
- 	StyleSheet
+    View,
+    WebView,
+    StyleSheet
 } from 'react-native';
 
 var styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F6F6EF',
-    flexDirection: 'column'
-  }
+    container: {
+        flex: 1,
+        backgroundColor: '#F6F6EF',
+        flexDirection: 'column'
+    }
 });
 
 class _WebView extends Component {
-  render() {
-    return (
-      <View style={styles.container}>
-        <WebView source={{uri: this.props.url}} />
-      </View>
-    );
-  }
+    render() {
+        return (
+            <View style={styles.container}>
+                <WebView source={{uri: this.props.url}} />
+            </View>
+        );
+    }
 }
 
 _WebView.propTypes = {
-  url: React.PropTypes.string.isRequired
+    url: React.PropTypes.string.isRequired
 };
 
 module.exports = _WebView;
